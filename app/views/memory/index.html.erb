@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Memory Game</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+  	<h1 id="big_header" >Memory Game: Life of Christina...</h1>
+     <div id="game">
+      <div id="board">
+      	<% @image_urls.shuffle.each do |image| %>
+      		<div class="tile">
+          	<img src=
+          		<%= image %>
+          	>
+       		</div>
+       	<% end %>
+
+      <div id="results">
+        <span class="image random"></span>
+        <h1>Good job!</h1>
+        <p>You found all the matches in <span id="score"></span> clicks.</p>
+        <button>play again</button>
+      </div>
+    </div>
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script src="js/memory.js"></script>
+  </body>
+</html> 
